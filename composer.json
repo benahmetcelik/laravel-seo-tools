@@ -4,9 +4,12 @@
   "description": "Laravel SEO Tools",
   "keywords": [
     "Laravel",
-    "Route",
-    "Route Lister",
-    "Laravel Route Lister"
+    "SEO",
+    "Seo Tools",
+    "Laravel Seo Tools",
+    "Laravel Site Map",
+    "Laravel SiteMap",
+    "Laravel Automatic Sitemap"
   ],
   "homepage": "https://github.com/benahmetcelik/laravel-seo-tools",
   "license": "MIT",
@@ -26,7 +29,7 @@
   "require-dev": {
   },
   "suggest": {
-    "digitaldreams/laracrud": "For Laravel Code generator"
+
   },
   "autoload": {
     "psr-4": {

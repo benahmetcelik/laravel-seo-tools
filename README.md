@@ -1,12 +1,12 @@
-# Laravel Route Lister #
+# Laravel Seo Tools #
 
 
-[See Demo](https://github.com/benahmetcelik/laravel-route-lister)
+[See Demo](https://github.com/benahmetcelik/laravel-seo-tools)
 
 ### Installation ###
 Add composer.json file :
 ```php
-   "benahmetcelik/laravel-route-lister": "dev-main",
+   "benahmetcelik/laravel-seo-tools": "dev-main",
 ```
 
 
@@ -14,23 +14,31 @@ Add composer.json file :
 Only Install and usage :)
 
 ### Change Colors ###
-Config/route-lister.php
+Config/seo.php
 
 ```php
-  'theme'=>[
-  'theme1'=>[
-  'back'=>'#00000',
-  'text'=>'#fffff'
-]
-]
+   'models'=>[
+       
+        'App\Models\News'=>[
+            'slug_status'=>true,
+            'slug_column'=>'slug',
+            'last_mod_column'=>'updated_at',
+            'changefreq'=>'daily',
+            'priority'=>1,
+            'route'=>'news'
+        ],
+        'App\Models\Page'=>[
+            'slug_status'=>true,
+            'slug_column'=>'slug',
+            'last_mod_column'=>'updated_at',
+            'changefreq'=>'daily',
+            'priority'=>1,
+            'route'=>'page'
+        ]
+    
+    ]
 ```
 
-### Change Theme ###
-Config/route-lister.php
-
-```php
-  'active'=>'theme2'
-```
 
 
 This is simple. Isn't it?
