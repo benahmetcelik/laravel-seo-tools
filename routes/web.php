@@ -11,7 +11,7 @@ Route::group([
 
 Route::group([
     'prefix' => 'sitemap', 'as' => 'sitemap::',
-    'namespace' => '\Seo\Http\Controllers'], function () {
+    'namespace' => '\SEO\Http\Controllers'], function () {
 
     Route::get('/{model?}', ['uses' => 'SiteMapController@index', 'as' => 'sitemap.index']);
 
