@@ -1,0 +1,45 @@
+{
+  "name": "benahmetcelik/laravel-seo-tools",
+  "type": "library",
+  "description": "Laravel SEO Tools",
+  "keywords": [
+    "Laravel",
+    "Route",
+    "Route Lister",
+    "Laravel Route Lister"
+  ],
+  "homepage": "https://github.com/benahmetcelik/laravel-seo-tools",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahmet CELIK",
+      "email": "ben4hmetcelik@gmail.com",
+      "homepage": "https://github.com/benahmetcelik",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "laravel/framework": ">=5.5",
+    "digitaldream/data-converter": ">=1.0"
+  },
+  "require-dev": {
+  },
+  "suggest": {
+    "digitaldreams/laracrud": "For Laravel Code generator"
+  },
+  "autoload": {
+    "psr-4": {
+      "Routes\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RoutesServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  }
+}
