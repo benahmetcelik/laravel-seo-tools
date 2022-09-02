@@ -36,7 +36,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Seo\\SeoServiceProvider"
+        "SEO\\SeoServiceProvider"
       ],
       "aliases": {
       }
