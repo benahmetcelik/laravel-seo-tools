@@ -1,6 +1,6 @@
 <?php
 
-namespace Seo\Console\Commands;
+namespace SEO\Console\Commands;
 
 use Illuminate\Console\Command;
 

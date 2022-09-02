@@ -1,6 +1,6 @@
 <?php
 
-namespace Seo\Http\Controllers;
+namespace SEO\Http\Controllers;
 
 
 use Illuminate\Http\Request;

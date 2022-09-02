@@ -30,7 +30,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Seo\\": "src/"
+      "SEO\\": "src/"
     }
   },
   "extra": {

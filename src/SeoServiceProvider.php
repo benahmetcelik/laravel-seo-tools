@@ -1,6 +1,6 @@
 <?php
 
-namespace Seo;
+namespace SEO;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;

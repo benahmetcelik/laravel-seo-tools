@@ -1,6 +1,6 @@
 <?php
 
-namespace Seo\Services;
+namespace SEO\Services;
 
 
 class Helper
