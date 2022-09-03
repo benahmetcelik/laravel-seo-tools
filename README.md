@@ -8,7 +8,11 @@ Add composer.json file :
 ```php
    "benahmetcelik/laravel-seo-tools": "dev-main",
 ```
-
+Run The Your Terminal :
+```php
+  php artisan vendor:publish
+```
+And 0 press
 
 ### Easy to use ###
 Only Install and usage :)
