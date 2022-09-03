@@ -49,7 +49,8 @@ trait SeoTrait
     public function getSeoDescs()
     {
         if ($this->seo_desc == null && array_key_exists(get_class($this), config('seo.models'))) {
-                $this->generateSeoDesc();
+         self::generateSeoDesc();
+
         }
         return '<meta name="description" content="' . $this->seo_desc . '" />
                 <meta property="og:description" content="' . $this->seo_desc . '" />
@@ -205,15 +206,15 @@ trait SeoTrait
     {
         parent::boot();
         static::creating(function ($model) {
-            $model->seo_title = self::generateSeoTitle();
-            $model->seo_desc = self::generateSeoDesc();
+            $model->seo_title = $model->generateSeoTitle();
+            $model->seo_desc = $model->generateSeoDesc();
         });
         static::updating(function ($model) {
             if ($model->seo_title == null) {
-                $model->seo_title = self::generateSeoTitle();
+                $model->seo_title = $model->generateSeoTitle();
             }
             if ($model->seo_desc == null) {
-                $model->seo_desc = self::generateSeoDesc();
+                $model->seo_desc = $model->generateSeoDesc();
             }
         });
 
