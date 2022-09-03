@@ -57,6 +57,12 @@ Config/seo.php
 ```
 
 
+Simple Usage in blade file :
+```php
+ {!! $news->getSeoTags() !!}
+```
+
+
 
 This is simple. Isn't it?
 
