@@ -29,7 +29,7 @@ class Helper
             if (function_exists("mb_substr")) $text = mb_substr($text, 0, $str, "UTF-8").'..';
             else $text = substr($text, 0, $str).'..';
         }
-        return $text;
+        return htmlspecialchars($text);
     }
     public static function generate_keyword($keywords_data){
         $keywords_data = explode(' ',$keywords_data);

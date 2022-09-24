@@ -179,7 +179,10 @@ trait SeoTrait
                 $table->string('seo_desc')->nullable();
             });
         }
-        $this->seo_desc = Helper::shorten($this->value(config('seo.models')[get_class($this)]['desc_column']), config('seo.models')[get_class($this)]['desc_lenght']);
+
+        $desc_column = config('seo.models')[get_class($this)]['desc_column'];
+        
+        $this->seo_desc = Helper::shorten($this->$desc_column, config('seo.models')[get_class($this)]['desc_lenght']);
         $this->save();
         return $this->seo_desc;
     }
@@ -196,29 +199,13 @@ trait SeoTrait
                 $table->string('seo_title')->nullable();
             });
         }
-        $this->seo_title = $this->value(config('seo.models')[get_class($this)]['title_column']);
+        $title_column = config('seo.models')[get_class($this)]['title_column'];
+        $this->seo_title = $this->$title_column;
         $this->save();
         return $this->seo_title;
     }
 
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::created(function ($model) {
-            $model->seo_title = $model->generateSeoTitle();
-            $model->seo_desc = $model->generateSeoDesc();
-        });
-        static::updated(function ($model) {
-            if ($model->seo_title == null) {
-                $model->seo_title = $model->generateSeoTitle();
-            }
-            if ($model->seo_desc == null) {
-                $model->seo_desc = $model->generateSeoDesc();
-            }
-        });
-
-    }
 
 
 }
